@@ -921,7 +921,7 @@ class GrblStreamer:
                     self.gcode_parser_state_requested = True
 
                 else:
-                    m = re.match(r'\$(.*)=(.*) \((.*)\)', line)
+                    m = re.match(r"\$(\S*)=(\S*)\ ?(\(.*\))?", line)
                     if m:
                         key = int(m.group(1))
                         val = m.group(2)
